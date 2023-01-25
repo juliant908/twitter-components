@@ -16,8 +16,8 @@ export function TwitterFollowCard(props: FollowCardProps) {
   const buttonClick = () => setIsFollow(!isFollowing);
   return (
     <>
-      <article className="tw-followCard d-flex justify-content-between w-100 align-items-center">
-        <header className="d-flex me-4">
+      <article className="tw-followCard d-flex justify-content-between align-items-center">
+        <header className="d-flex">
           <img
             className="me-2"
             src={`https://unavatar.io/${props.userName}`}
