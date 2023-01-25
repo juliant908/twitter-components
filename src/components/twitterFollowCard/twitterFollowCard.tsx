@@ -9,9 +9,9 @@ interface FollowCardProps {
 
 export function TwitterFollowCard(props: FollowCardProps) {
   const [isFollowing, setIsFollow] = useState(props.initialIsFollowing);
-  const text = isFollowing ? "Unfollow" : "Follow";
+  const text = isFollowing ? "Following" : "Follow";
   const buttonClass = isFollowing
-    ? "py-1 px-4 roundButton unfollow"
+    ? "py-1 px-4 roundButton following"
     : "py-1 px-4 roundButton follow";
   const buttonClick = () => setIsFollow(!isFollowing);
   return (
@@ -25,12 +25,13 @@ export function TwitterFollowCard(props: FollowCardProps) {
           />
           <div className="d-flex flex-column">
             <strong>{props.name}</strong>
-            <span>@{props.userName}</span>
+            <span className="tw-followCard-userName">@{props.userName}</span>
           </div>
         </header>
         <aside>
           <button className={buttonClass} onClick={buttonClick}>
-            {text}
+            <span className="tw-followCard-action">{text}</span>
+            <span className="tw-followCard-unfollow">Unfollow</span>
           </button>
         </aside>
       </article>
