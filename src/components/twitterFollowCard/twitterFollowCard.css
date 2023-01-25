@@ -1,0 +1,30 @@
+.roundButton {
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 48px;
+}
+
+strong {
+  color: white;
+}
+
+span {
+  color: rgb(140, 130, 115);
+}
+
+.follow {
+  background-color: #0c1014;
+  color: white;
+  border: 2px solid #bbb;
+}
+
+.unfollow {
+  background-color: rgb(255, 243, 243);
+  color: black;
+  border: 2px solid black;
+}
